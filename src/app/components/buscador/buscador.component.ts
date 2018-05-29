@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { Router } from '@angular/router';
 
 import { HeroesService } from '../../services/heroes.service';
 
@@ -14,8 +13,7 @@ export class BuscadorComponent implements OnInit {
   termino:string;
 
   constructor( private activatedRoute: ActivatedRoute,
-               private _heroesService: HeroesService,
-               private _router: Router) {
+               private _heroesService: HeroesService) {
 
   }
 
@@ -26,8 +24,6 @@ export class BuscadorComponent implements OnInit {
     });
   }
 
-  verHeroe( idx: number ) {
-    this._router.navigate([ '/heroe', idx ]);
-  }
+
 
 }
